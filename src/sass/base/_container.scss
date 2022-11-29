@@ -1,0 +1,22 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@include media-phone {
+  .container {
+    min-width: 280px;
+  }
+}
+
+@include media-tablet {
+  .container {
+    width: 704px;
+  }
+}
+
+@include media-desktop {
+  .container {
+    width: 1110px;
+  }
+}

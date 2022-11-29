@@ -1,0 +1,110 @@
+// ----------------------------------------------------------------------------------  Шрифты  ---------------------------------------------------------------------------------- //
+
+@mixin main-font($weight, $size, $height, $style: normal, $transform: none) {
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+  text-transform: $transform;
+}
+
+@mixin second-font($weight, $size, $height, $style: normal, $transform: none) {
+  font-family: 'Inter', sans-serif;
+
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+  text-transform: $transform;
+}
+
+// ========  How to use:  ==============
+// К примеру есть следующие стили из секции hero:
+// font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 72px;
+// line-height: 108px;
+
+// Вот что мы пишем в scss:
+// @include main-font(400, 72px, calc(108 / 72);
+// =============================================
+// Порядок задания свойств в скобочках -- font-weight, font-size, font-height, font-style (если ничего не передать, будет normal), text-transform (если ничего не передать, будет none)
+
+// ----------------------------------------------------------------------------------  Медиа запросы  ---------------------------------------------------------------------------------- //
+
+@mixin media-phone {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-tablet-desktop {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+// @include media-phone {
+//   body {                            / -
+//     background-color: tomato;     < =  - Все как обычно, тут твои стили, все просто, просто запись покороче.
+//   }                                 \ -
+// }
+
+// Тоже самое для background-image - достаточно прописать @include retina { <your styles> } и все макароны для ретина дисплеев будут автоматически подставлены.
+
+// ----------------------------------------------------------------------------------  Бордер  ---------------------------------------------------------------------------------- //
+
+@mixin bordered($size, $color, $radius: 0px, $type: solid) {
+  border: $size $type $color;
+  border-radius: $radius;
+}
+
+// How to use:
+// @include bordered(1px, #000, 16px, dashed);
+// Если 2 последних аргумента $radius и $type не указать, то будут подставлены default значения, а именно border-radius: 0px и border-type: solid, то есть если Вам не нужен
+// border-radius, просто не передавайте аргумент, если не нужен другой стиль, отличный от solid, тоже ничего не указываем.
+
+// ----------------------------------------------------------------------------------  Центрирование  ---------------------------------------------------------------------------------- //
+
+@mixin flexed($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin absolute($top: 50%, $left: 50%, $X: -50%, $Y: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($X $Y);
+}
+
+// How to use:
+// @include flexed(justify-content, align items):
+// display:flex - идет по умолчанию
+// Если ичего не передавать в аргументах, то justify-content и align-items будут иметь значение center.
+// Подобная ситуация с абсолюбом, только значений больше, 1й аргумент - top, 2й - left, 3й - translateX, 4й - translateY
+// Если ничего не указать. то элемент станет по центру родителя имеющего position отличную от static.
