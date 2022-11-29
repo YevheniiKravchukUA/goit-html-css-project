@@ -1,11 +1,14 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @include media-phone {
   .container {
-    min-width: 280px;
+    min-width: 480px;
   }
 }
 

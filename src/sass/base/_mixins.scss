@@ -35,8 +35,14 @@
 
 // ----------------------------------------------------------------------------------  Медиа запросы  ---------------------------------------------------------------------------------- //
 
+@mixin media-phone-resp {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
+
 @mixin media-phone {
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     @content;
   }
 }
@@ -48,13 +54,13 @@
 }
 
 @mixin media-tablet-desktop {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     @content;
   }
 }
 
 @mixin media-desktop {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     @content;
   }
 }
@@ -67,10 +73,11 @@
     @content;
   }
 }
-// @include media-phone {
+
+// @include media-phone {       ________
 //   body {                            / -
-//     background-color: tomato;     < =  - Все как обычно, тут твои стили, все просто, просто запись покороче.
-//   }                                 \ -
+//     background-color: tomato;  <<< =  - Все как обычно, тут твои стили, все просто, просто запись покороче.
+//   }                          _______\ -
 // }
 
 // Тоже самое для background-image - достаточно прописать @include retina { <your styles> } и все макароны для ретина дисплеев будут автоматически подставлены.
