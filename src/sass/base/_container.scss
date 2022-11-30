@@ -6,6 +6,12 @@
   margin-right: auto;
 }
 
+@include media-phone-resp {
+  .container {
+    width: 100%;
+  }
+}
+
 @include media-phone {
   .container {
     max-width: 510px;
