@@ -20,6 +20,16 @@
   text-transform: $transform;
 }
 
+@mixin modal-font($weight, $size, $height, $style: normal, $transform: none) {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+  text-transform: $transform;
+}
+
 // ========  How to use:  ==============
 // К примеру есть следующие стили из секции hero:
 // font-family: 'Poppins';
@@ -43,6 +53,12 @@
 
 @mixin media-phone {
   @media screen and (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-phone-top {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
