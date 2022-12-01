@@ -1,0 +1,101 @@
+.infrastructure {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ede9e3;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+}
+.infrastructure__title {
+  margin-left: 20px;
+  @include main-font(500, 28px, calc(42 / 28));
+  color: getColor('accent');
+  @media screen and (min-width: 768px) {
+    @include main-font(500, 40px, calc(60 / 40));
+  }
+}
+.infrastructure__wrapper {
+  height: 431px;
+  width: 100%;
+
+  position: relative;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/background/infrastructure/infrastructure_bg_mob.jpg);
+  @include retina {
+    background-image: url(../images/background/infrastructure/infrastructure_bg_mob@2.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/background/infrastructure/infrastructure_bg_tab.jpg);
+    @include retina {
+      background-image: url(../images/background/infrastructure/infrastructure_bg_tab@2.jpg);
+    }
+    height: 486px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/background/infrastructure/infrastructure_bg_desc.jpg);
+    @include retina {
+      background-image: url(../images/background/infrastructure/infrastructure_bg_desc@2.jpg);
+    }
+  }
+}
+.infrastructure__list {
+  padding: 24px 18px;
+  width: 280px;
+  height: 351px;
+  background-color: rgba(252, 252, 251, 0.8);
+  border-radius: 8px;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (min-width: 768px) {
+    width: 331px;
+    height: 470px;
+    top: 8px;
+    right: 37px;
+    left: auto;
+    transform: translate(0, 0);
+  }
+  @media screen and (min-width: 1200px) {
+    right: 168px;
+  }
+}
+.infrastructure__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.infrastructure__text {
+  @include main-font(500, 14px, calc(21 / 14));
+  color: getColor('accent');
+  @media screen and (min-width: 768px) {
+    @include main-font(500, 16px, calc(24 / 16));
+  }
+}
+.advantage__wrapper {
+  @include flexed;
+  text-align: center;
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  border: 1px solid getColor('third');
+}
+.advantage__text {
+  width: 72px;
+
+  @include main-font(600, 14px, calc(21 / 14));
+  color: getColor(third);
+  @media screen and (min-width: 768px) {
+    @include main-font(600, 16px, calc(24 / 16));
+  }
+}
