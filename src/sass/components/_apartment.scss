@@ -1,1 +1,99 @@
+.apartment {
+  // display: flex;
+  // text-align: center;
+  background-color: #fcfcfb;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  @media screen and(min-width: 768px) {
+    padding-bottom: 40px;
+  }
+}
 
+.apartment__title {
+  width: 100%;
+  margin-bottom: 28px;
+  @include main-font(500, 28px, calc(42 / 28));
+  color: getColor('accent');
+  @media screen and (min-width: 768px) {
+    @include main-font(500, 40px, calc(60 / 40));
+    margin-bottom: 40px;
+  }
+}
+
+.apartment__list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  // gap: 28px;
+  row-gap: 32px;
+  column-gap: 28px;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    row-gap: 35px;
+  }
+}
+
+.apartment__link {
+  &:hover .type__wrapper,
+  &:focus .type__wrapper {
+    border: 2px solid #7e6d53;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+  }
+}
+
+.type__wrapper {
+  width: 280px;
+  text-align: center;
+  padding: 20px 32px;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 346px;
+  }
+}
+
+.type_img {
+  @include flexed;
+}
+
+.type__title {
+  @include main-font(400, 28px, calc(34 / 28));
+  color: getColor('third');
+  margin-top: 20px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    @include main-font(300, 32px, calc(39 / 32));
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+.type__text {
+  @include main-font(300, 20px, calc(26 / 20));
+  @media screen and (min-width: 768px) {
+    @include main-font(300, 24px, calc(31 / 24));
+  }
+}
+
+.apartment__btn {
+  display: block;
+  @include main-font(500, 18px, calc(27 / 18));
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  color: getColor('primary');
+  padding: 13.5px 36.5px;
+  background-color: #7e6d53;
+  border: none;
+  border-radius: 16px;
+  @media screen and (min-width: 768px) {
+    @include main-font(500, 20px, calc(30 / 20));
+    padding: 14px 39.5px;
+  }
+}
