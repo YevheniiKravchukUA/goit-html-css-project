@@ -1,5 +1,7 @@
 // style
 .about {
+    margin-top: 100px;
+    margin-bottom: 100px;
     width: 100%;
     min-height: 677px;
     margin-left: auto;
@@ -8,6 +10,12 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+
+    @include media-phone-top {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
     background-image: url(../images/background/about/about_bg_mob.jpg);
 
         @include retina {
