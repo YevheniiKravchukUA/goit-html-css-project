@@ -1,45 +1,45 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    modal: document.querySelector("[data-modal]"),
+    openModalBtns: document.querySelectorAll('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtns.forEach(btn => btn.addEventListener('click', toggleModal));
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+    refs.modal.classList.toggle('is-hidden');
   }
 })();
 
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-info-open]"),
-    closeModalBtn: document.querySelector("[data-modal-info-close]"),
-    modal: document.querySelector("[data-modal-info]"),
+    openModalBtn: document.querySelector('[data-modal-info-open]'),
+    closeModalBtn: document.querySelector('[data-modal-info-close]'),
+    modal: document.querySelector('[data-modal-info]'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+    refs.modal.classList.toggle('is-hidden');
   }
 })();
 
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-down-open]"),
-    closeModalBtn: document.querySelector("[data-modal-down-close]"),
-    modal: document.querySelector("[data-modal-down]"),
+    openModalBtn: document.querySelector('[data-modal-down-open]'),
+    closeModalBtn: document.querySelector('[data-modal-down-close]'),
+    modal: document.querySelector('[data-modal-down]'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+    refs.modal.classList.toggle('is-hidden');
   }
 })();
 

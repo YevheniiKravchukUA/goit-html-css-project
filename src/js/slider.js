@@ -1,10 +1,33 @@
+import Swiper, {
+  Navigation,
+  Pagination,
+  Keyboard,
+  EffectCoverflow,
+} from 'swiper';
+
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
+  modules: [Navigation, Pagination, Keyboard, EffectCoverflow],
+
   direction: 'horizontal',
+  navigation: {
+    nextEl: '.gallery__slider-button--next',
+    prevEl: '.gallery__slider-button--prev',
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 
   loop: true,
   simulateTouch: false,
-  slideToCleckedSlide: true,
+  slideToClickedSlide: true,
   watchOverflow: true,
   centeredSlides: true,
   initialSlide: 1,
@@ -15,21 +38,5 @@ const swiper = new Swiper('.swiper', {
     rotate: 0,
     stretch: 32,
     scale: 0.6,
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  navigation: {
-    nextEl: '.gallery__slider-button--next',
-    prevEl: '.gallery__slider-button--prev',
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
   },
 });
