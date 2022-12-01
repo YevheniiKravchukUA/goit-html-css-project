@@ -1,14 +1,15 @@
 .infrastructure {
+  min-height: 500px;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ede9e3;
   @media screen and (min-width: 768px) {
+    padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 .infrastructure__title {
-  margin-left: 20px;
   @include main-font(500, 28px, calc(42 / 28));
   color: getColor('accent');
   @media screen and (min-width: 768px) {
@@ -19,7 +20,9 @@
   height: 431px;
   width: 100%;
 
-  position: relative;
+  position: absolute;
+  top: 126px;
+  left: 0;
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,6 +38,7 @@
       background-image: url(../images/background/infrastructure/infrastructure_bg_tab@2.jpg);
     }
     height: 486px;
+    top: 184px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -47,13 +51,14 @@
 .infrastructure__list {
   padding: 24px 18px;
   width: 280px;
+
   height: 351px;
   background-color: rgba(252, 252, 251, 0.8);
   border-radius: 8px;
 
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -71,6 +76,7 @@
   }
 }
 .infrastructure__item {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
