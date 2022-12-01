@@ -1,5 +1,5 @@
 .infrastructure {
-  min-height: 500px;
+  min-height: 617px;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -7,8 +7,13 @@
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
+    min-height: 770px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-height: 766px;
   }
 }
+
 .infrastructure__title {
   @include main-font(500, 28px, calc(42 / 28));
   color: getColor('accent');
@@ -16,6 +21,7 @@
     @include main-font(500, 40px, calc(60 / 40));
   }
 }
+
 .infrastructure__wrapper {
   height: 431px;
   width: 100%;
