@@ -82,6 +82,7 @@
 }
 
 .apartment__btn {
+  cursor: pointer;
   display: block;
   @include main-font(500, 18px, calc(27 / 18));
   margin-top: 28px;
