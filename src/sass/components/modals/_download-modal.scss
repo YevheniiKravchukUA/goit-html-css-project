@@ -40,10 +40,12 @@
 }
 
 .download-modal__content-wrapper {
-  width: 294px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: none;
+
+    width: 294px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
   @media screen and (max-width: 562px) {
     width: 100%;
@@ -84,11 +86,12 @@
   border: 1px solid getColor('accent');
   border-radius: 8px;
 
-  outline: unset;
-
-  &::after {
-    content: '';
-  }
+    &::placeholder {
+        @include main-font(700, 10px, 1.5);
+        color: #000000;
+        
+        opacity: 0.3;
+    }
 
   &::placeholder {
     @include main-font(700, 10px, 1.5);
@@ -137,18 +140,31 @@
     pointer-events: none;
   }
 }
+.download-modal__popup-wrapper {
+    // display: none;
+    
+    & > .download-modal__text:first-child {
+        text-align: center;
+    }
 
-.download-modal__hidden-wrapper {
-  & > .download-modal__text:first-child {
-    text-align: center;
-  }
+    & > .download-modal__text:last-child {
+        margin-top: 16px;
+    }
 
-  & > .download-modal__text:last-child {
-    margin-top: 16px;
-  }
+    @media screen and (max-width: 562px) {
+        margin: 0 auto;
+        width: 200px;
+    }
+}
 
-  @media screen and (max-width: 562px) {
-    margin: 0 auto;
-    width: 200px;
-  }
+.download-modal--great {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
 }

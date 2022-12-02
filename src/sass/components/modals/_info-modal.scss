@@ -1,6 +1,6 @@
 .info-modal {
     padding: 32px 40px;
-
+    
     // В "media-phone" відбувається скачок на 767px через те що ні одне медіправило не првцює
     @media screen and (min-width: 479px) {
         width: 480px;
@@ -8,6 +8,7 @@
 
     @include media-tablet {
         width: 571px;
+        height: 355px;
         padding: 40px 57px 40px 32px;
     }
 }
