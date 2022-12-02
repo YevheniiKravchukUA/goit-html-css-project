@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 26px;
-
+  padding-top: 60px;
   padding-bottom: 60px;
 
   @include media-tablet {
     gap: 24px;
+    padding-bottom: 100px;
     padding-bottom: 100px;
   }
 
@@ -102,15 +103,21 @@
   padding-top: 12px;
   padding-bottom: 12px;
   cursor: pointer;
-
   @include main-font(300, 16px, 1.5);
   color: getColor('third');
 
   background-color: getColor('primary');
   border-radius: 8px;
-
   border: none;
+  cursor: pointer;
 
+  transition: background-color 250ms, visibility 250ms, color 250ms,
+    visibility 250ms;
+
+  &:active {
+    background-color: getColor('accent');
+    color: getColor('white');
+  }
   @include media-tablet {
     padding: 9px 46px;
     height: 54px;

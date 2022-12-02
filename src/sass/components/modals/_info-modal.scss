@@ -1,85 +1,88 @@
 .info-modal {
-    padding: 32px 40px;
-    
-    // В "media-phone" відбувається скачок на 767px через те що ні одне медіправило не првцює
-    @media screen and (min-width: 479px) {
-        width: 480px;
-    }
+  padding: 32px 40px;
 
-    @include media-tablet {
-        width: 571px;
-        height: 355px;
-        padding: 40px 57px 40px 32px;
-    }
+  // В "media-phone" відбувається скачок на 767px через те що ні одне медіправило не првцює
+  @media screen and (min-width: 479px) {
+    width: 480px;
+  }
+
+  @include media-tablet {
+    width: 571px;
+    padding: 40px 57px 40px 32px;
+  }
 }
 
 .info-modal__img-and-info {
-    margin-top: 32px;
+  margin-top: 32px;
 
-    @include media-tablet {
-        @include flexed(space-between);
-    }
+  @include media-tablet {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .info-modal__info-and-btn {
-    margin-top: 22px;
+  margin-top: 22px;
+  cursor: pointer;
 
-    @include media-tablet {
-        margin-top: 0;
-    }
+  @include media-tablet {
+    margin-top: 0;
+  }
 }
 
 .info-modal__title {
-    @include main-font(700, 28px, 1.5);
-    text-align: center;
-    color: getColor('third');
+  @include main-font(700, 28px, 1.5);
+  text-align: center;
+  color: getColor('third');
 
-    @include media-tablet {
-        text-align: left;
-        padding-left: 200px;
-    }
+  @include media-tablet {
+    text-align: left;
+    padding-left: 200px;
+  }
 }
 
 .info-modal__img {
-    @include media-tablet {
-        max-height: 238px;
-    }
+  background-repeat: no-repeat;
+
+  @include media-tablet {
+    max-height: 238px;
+  }
 }
 
 .info-modal__text-big {
-    @include main-font(300, 20px, 1.5);
-    color: getColor('third');
+  @include main-font(300, 20px, 1.5);
+  color: getColor('third');
 
-    &--area {
-        margin-bottom: 4px;
-    }
-    
-    &--rooms {
-        margin-bottom: 12px;
-    }
+  &--area {
+    margin-bottom: 4px;
+  }
+
+  &--rooms {
+    margin-bottom: 12px;
+  }
 }
 
 .info-modal__text-small {
-    @include main-font(300, 14px, 1.5);
-    color: getColor('third');
+  @include main-font(300, 14px, 1.5);
+  color: getColor('third');
 }
 
 .info-modal__text {
-    &--accent {
-        color: getColor('accent');
-    }
+  &--accent {
+    color: getColor('accent');
+  }
 
-    &--fool-price {
-        margin-bottom: 26px;
-    
-        @include media-tablet {
-            margin-bottom: 18px;
-        }
+  &--fool-price {
+    margin-bottom: 26px;
+
+    @include media-tablet {
+      margin-bottom: 18px;
     }
+  }
 }
 
 .info-modal__item {
-    &--price-per-m2 {
-        margin-bottom: 8px;
-    }
+  &--price-per-m2 {
+    margin-bottom: 8px;
+  }
 }

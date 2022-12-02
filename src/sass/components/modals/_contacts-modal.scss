@@ -1,8 +1,8 @@
 .modal {
-    @include absolute();
-    width: 100%;
+  @include absolute();
+  width: 100%;
 
-    background-color: getColor('primary');
+  background-color: getColor('primary');
 }
 
 .backdrop {
@@ -48,6 +48,8 @@
 
   border-color: transparent;
   border-radius: 50%;
+
+  cursor: pointer;
 
   transition: color 250ms, fill 250ms;
 
