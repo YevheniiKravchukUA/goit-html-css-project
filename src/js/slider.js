@@ -36,7 +36,28 @@ const swiper = new Swiper('.swiper', {
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 0,
-    stretch: 32,
-    scale: 0.6,
+    stretch: 10,
+    scale: 0.7,
+  },
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 10,
+        scale: 0.7,
+      },
+    },
+
+    768: {
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 32,
+        scale: 0.6,
+      },
+    },
   },
 });
