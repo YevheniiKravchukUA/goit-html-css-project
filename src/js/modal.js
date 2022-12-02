@@ -30,16 +30,30 @@
 
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-down-open]'),
-    closeModalBtn: document.querySelector('[data-modal-down-close]'),
-    modal: document.querySelector('[data-modal-down]'),
+    openModalBtn: document.querySelector("[data-modal-down-open]"),
+    closeModalBtn: document.querySelector("[data-modal-down-close]"),
+    modal: document.querySelector("[data-modal-down]"),
+    btn: document.querySelector(".download-modal__btn"),
+    great: document.querySelector(".download-modal--great"),
+    form: document.querySelector(".download-modal__content-wrapper"),
+    input: document.querySelector(".download-modal__field"),
   };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", returns);
+  refs.btn.addEventListener("click", hidden);
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    refs.modal.classList.toggle("is-hidden");
+  }
+  function hidden(e) {
+    refs.great.classList.toggle("block");
+    refs.form.classList.toggle("none");
+    e.preventDefault();
+  }
+  function returns() {
+    refs.modal.classList.toggle("is-hidden");
+    refs.great.classList.toggle("block");
+    refs.form.classList.toggle("none");
+    refs.input.value = " ";
   }
 })();
 
