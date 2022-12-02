@@ -1,155 +1,154 @@
 .download-modal {
-    position: relative;
+  position: relative;
 
-    @include flexed(space-between);
-    width: 562px;
-    height: 208px;
-    
-    padding: 24px 44px 32px 40px;
-    
-    background-color: #EDE9E3; // в змінні
-    border-radius: 24px;
+  @include flexed(space-between);
+  width: 562px;
+  height: 208px;
 
-    @media screen and (min-width: 562px) {
-        &::before {
-            content: "";
-            position: relative;
-            z-index: 4;
-    
-            display: block;
-            flex-basis: 112px;
-            height: 134px;
-    
-            background-image: url('../images/png/download_catalog.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+  padding: 24px 44px 32px 40px;
+
+  background-color: #ede9e3; // в змінні
+  border-radius: 24px;
+
+  @media screen and (min-width: 562px) {
+    &::before {
+      content: '';
+      position: relative;
+      z-index: 4;
+
+      display: block;
+      flex-basis: 112px;
+      height: 134px;
+
+      background-image: url('../images/png/download_catalog.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
+  }
 
-    @media screen and (max-width: 562px) {
-        width: 100%;
-        padding: 15px;
-    }
+  @media screen and (max-width: 562px) {
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 .modal__close-btn--download-modal-style {
-    top: 8px;
-    right: 8px;
-    color: getColor('accent');
+  top: 8px;
+  right: 8px;
+  color: getColor('accent');
 }
 
 .download-modal__content-wrapper {
-    width: 294px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  width: 294px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-    @media screen and (max-width: 562px) {
-        width: 100%;
-    }
+  @media screen and (max-width: 562px) {
+    width: 100%;
+  }
 }
 
 .download-modal__text {
-    @include main-font(600, 16px, 1.5);
-    color: getColor('accent');
+  @include main-font(600, 16px, 1.5);
+  color: getColor('accent');
 
-    &--thin {
-        font-weight: 300;
-    }
+  &--thin {
+    font-weight: 300;
+  }
 
-    &:nth-child(1) {
-        width: 180px;
-    }
+  &:nth-child(1) {
+    width: 180px;
+  }
 
-    &:nth-child(2) {
-        width: 249px;
-    }
+  &:nth-child(2) {
+    width: 249px;
+  }
 }
 
 .download-modal__form {
-    position: relative;
+  position: relative;
 }
 
 .download-modal__field {
-    width: 100%;
-    height: 32px;
-    padding: 6px 40px 6px 16px;
+  width: 100%;
+  height: 32px;
+  padding: 6px 40px 6px 16px;
 
+  @include main-font(700, 10px, 1.5);
+
+  color: getColor('third');
+
+  background-color: inherit;
+  border: 1px solid getColor('accent');
+  border-radius: 8px;
+
+  outline: unset;
+
+  &::after {
+    content: '';
+  }
+
+  &::placeholder {
     @include main-font(700, 10px, 1.5);
-    
-    color: getColor('third');
+    color: #000000;
 
-    background-color: inherit;
-    border: 1px solid getColor('accent');
-    border-radius: 8px;
+    opacity: 0.3;
+  }
 
-    outline: unset;
-
-    &::after {
-        content: "";
-    }
-
-    &::placeholder {
-        @include main-font(700, 10px, 1.5);
-        color: #000000;
-        
-        opacity: 0.3;
-    }
-
-    &:invalid {
-        border-color: #ff0000; // треба додати в змінні!
-    }
+  &:invalid {
+    border-color: #ff0000; // треба додати в змінні!
+  }
 }
 
 .download-modal__btn {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-    width: auto;
-    height: 32px;
-    @include flexed();
-    justify-content: flex-end;
-    
-    margin-right: 18px;
+  width: auto;
+  height: 32px;
+  @include flexed();
+  justify-content: flex-end;
 
-    background-color: inherit;
+  margin-right: 18px;
 
-    border: none;
+  background-color: inherit;
+
+  border: none;
 }
 
 .download-modal__btn-icon {
-    fill: getColor('accent');
+  fill: getColor('accent');
 }
 
 .download-modal--hidden {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    right: 0;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
 
-    transition: opacity 250ms, visibility 250ms;
+  transition: opacity 250ms, visibility 250ms;
 
-    &.is-hidden {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .download-modal__hidden-wrapper {
-    
-    & > .download-modal__text:first-child {
-        text-align: center;
-    }
+  & > .download-modal__text:first-child {
+    text-align: center;
+  }
 
-    & > .download-modal__text:last-child {
-        margin-top: 16px;
-    }
+  & > .download-modal__text:last-child {
+    margin-top: 16px;
+  }
 
-    @media screen and (max-width: 562px) {
-        margin: 0 auto;
-        width: 200px;
-    }
+  @media screen and (max-width: 562px) {
+    margin: 0 auto;
+    width: 200px;
+  }
 }

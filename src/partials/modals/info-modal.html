@@ -1,55 +1,70 @@
-<div class="backdrop" data-modal>
-    <div class="modal info-modal">
-        <button class="modal__close-btn" type="button" data-modal-close>
-            <svg class="modal__close-icon" width="25" height="25">
-                <use href="./images/svg/symbol-defs.svg#icon-close_btn"></use>
-            </svg>
+<div class="backdrop is-hidden" data-modal-info>
+  <div class="modal info-modal">
+    <button class="modal__close-btn" type="button" data-modal-info-close>
+      <svg class="modal__close-icon" width="25" height="25">
+        <use href="./images/svg/symbol-defs.svg#icon-close_btn"></use>
+      </svg>
+    </button>
+
+    <h2 class="info-modal__title">House 1</h2>
+
+    <div class="info-modal__img-and-info">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/content/info-modal/flat_info_tab-desc.jpg     1x,
+            ./images/content/info-modal/flat_info_tab@2-desc@2.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="
+            ./images/content/info-modal/flat_info_mob.jpg   1x,
+            ./images/content/info-modal/flat_info_mob@2.jpg 2x
+          "
+          type="image/jpg"
+        />
+        <img
+          class="info-modal__img"
+          src="./images/content/info-modal/flat_info_mob.jpg"
+          alt="House plane"
+          width="240"
+          height="201"
+        />
+      </picture>
+
+      <div class="info-modal__info-and-btn">
+        <ul class="info-modal__items">
+          <li class="info-modal__item">
+            <p class="info-modal__text-big info-modal__text-big--area">
+              Total area: <span class="info-modal__text--accent">50.2m2</span>
+            </p>
+          </li>
+          <li class="info-modal__item">
+            <p class="info-modal__text-big info-modal__text-big--rooms">
+              Rooms: <span class="info-modal__text--accent">1</span>
+            </p>
+          </li>
+          <li class="info-modal__item">
+            <p
+              class="info-modal__text-big info-modal__text--accent info-modal__item--price-per-m2"
+            >
+              from 1000 dol/m2
+            </p>
+          </li>
+          <li class="info-modal__item">
+            <p class="info-modal__text-small info-modal__text--fool-price">
+              about 50 200 dollars
+            </p>
+          </li>
+        </ul>
+
+        <button class="form__btn form__btn--info-style" type="button">
+          Contact us
         </button>
-        
-        <h2 class="info-modal__title">House 1</h2>
-        
-        <div class="info-modal__img-and-info">
-            <picture>
-                <source 
-                    media="(min-width: 768px)"
-                    srcset="./images/content/info-modal/flat_info_tab-desc.jpg 1x, ./images/content/info-modal/flat_info_tab@2-desc@2.jpg 2x"
-                    type="image/jpg">
-                <source 
-                    media="(max-width: 768px)"
-                    srcset="./images/content/info-modal/flat_info_mob.jpg 1x, ./images/content/info-modal/flat_info_mob@2.jpg 2x"
-                    type="image/jpg">
-                <img class="info-modal__img" src="./images/content/info-modal/flat_info_mob.jpg" alt="House plane"
-                    width="240" height="201" />
-            </picture>
-
-            <div class="info-modal__info-and-btn">
-                <ul class="info-modal__items">
-                    <li class="info-modal__item">
-                        <p class="info-modal__text-big info-modal__text-big--area">
-                            Total area: <span class="info-modal__text--accent">50.2m2</span>
-                        </p>
-                    </li>
-                    <li class="info-modal__item">
-                        <p class="info-modal__text-big info-modal__text-big--rooms">
-                            Rooms: <span class="info-modal__text--accent">1</span>
-                        </p>
-                    </li>
-                    <li class="info-modal__item">
-                        <p class="info-modal__text-big info-modal__text--accent info-modal__item--price-per-m2">
-                            from 1000 dol/m2
-                        </p>
-                    </li>
-                    <li class="info-modal__item">
-                        <p class="info-modal__text-small info-modal__text--fool-price">
-                            about 50 200 dollars
-                        </p>
-                    </li>
-                </ul>
-
-                <button class="form__btn form__btn--info-style" type="button">
-                    Contact us
-                </button>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>

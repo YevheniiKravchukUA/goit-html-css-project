@@ -1,32 +1,38 @@
-<div class="backdrop" data-modal>
-    <div class="modal download-modal">
-        <button class="modal__close-btn modal__close-btn--download-modal-style" type="button" data-modal-close>
-            <svg class="modal__close-icon" width="25" height="25">
-                <use href="./images/svg/symbol-defs.svg#icon-close_btn"></use>
-            </svg>
+<div class="backdrop is-hidden" data-modal-down>
+  <div class="modal download-modal">
+    <button
+      class="modal__close-btn modal__close-btn--download-modal-style"
+      type="button"
+      data-modal-down-close
+    >
+      <svg class="modal__close-icon" width="25" height="25">
+        <use href="./images/svg/symbol-defs.svg#icon-close_btn"></use>
+      </svg>
+    </button>
+    <div class="download-modal__content-wrapper">
+      <p class="download-modal__text">Download the catalog</p>
+      <p class="download-modal__text download-modal__text--thin">
+        We will send you more photos, videos and information by mail
+      </p>
+      <form class="download-modal__form">
+        <input
+          class="download-modal__field"
+          type="email"
+          placeholder="EMAIL ADRESS"
+        />
+        <button class="download-modal__btn" type="submit">
+          <svg class="download-modal__btn-icon" width="21" height="21">
+            <use href="./images/svg/symbol-defs.svg#icon-send_icon"></use>
+          </svg>
         </button>
-        
-        <div class="download-modal__content-wrapper">
-            <p class="download-modal__text">Download the catalog</p>
-            <p class="download-modal__text download-modal__text--thin">
-                We will send you more photos, videos and information by mail
-            </p>
+      </form>
 
-            <form class="download-modal__form">
-                <input class="download-modal__field" type="email" placeholder="EMAIL ADRESS">
-                <button class="download-modal__btn" type="submit">
-                    <svg class="download-modal__btn-icon" width="21" height="21">
-                        <use href="./images/svg/symbol-defs.svg#icon-send_icon"></use> 
-                    </svg>
-                </button>
-            </form>
-
-            <div class="download-modal download-modal--hidden">
-                <div class="download-modal__hidden-wrapper">
-                    <p class="download-modal__text">GREAT!</p>
-                    <p class="download-modal__text">NOW CHECK YOUR MAIL</p>
-                </div>
-            </div>
+      <div class="download-modal download-modal--hidden">
+        <div class="download-modal__hidden-wrapper">
+          <p class="download-modal__text">GREAT!</p>
+          <p class="download-modal__text">NOW CHECK YOUR MAIL</p>
         </div>
+      </div>
     </div>
+  </div>
 </div>

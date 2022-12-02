@@ -2,8 +2,8 @@
   <div class="container">
     <h2 class="apartment__title">Choose your apartment</h2>
     <ul class="apartment__list">
-      <li class="apartment__item">
-        <a class="apartment__link" href="#">
+      <li class="apartment__item" data-modal-info-open>
+        <a class="apartment__link" href="">
           <div class="type__wrapper">
             <picture class="type_img">
               <source
@@ -37,13 +37,13 @@
           </div>
         </a>
       </li>
-      <li class="apartment__item">
-        <a class="apartment__link" href="#">
+      <li class="apartment__item" data-modal-info-open>
+        <a class="apartment__link" href="">
           <div class="type__wrapper">
-          <picture class="type_img">
+            <picture class="type_img">
               <source
                 srcset="
-                  ./images/png/apartment/type2__desc.png  1x,
+                  ./images/png/apartment/type2__desc.png   1x,
                   ./images/png/apartment/type2__desc@2.png 2x
                 "
                 type="image/png"
@@ -51,7 +51,7 @@
               />
               <source
                 srcset="
-                  ./images/png/apartment/type2__tab.png  1x,
+                  ./images/png/apartment/type2__tab.png   1x,
                   ./images/png/apartment/type2__tab@2.png 2x
                 "
                 type="image/png"
@@ -59,7 +59,7 @@
               />
               <source
                 srcset="
-                  ./images/png/apartment/type2__mob.png  1x,
+                  ./images/png/apartment/type2__mob.png   1x,
                   ./images/png/apartment/type2__mob@2.png 2x
                 "
                 type="image/png"
@@ -67,17 +67,18 @@
               />
               <img src="./images/png/apartment/type2__desc.png" alt="t1" />
             </picture>
-          <h3 class="type__title">Type 2</h3>
-          <p class="type__text">total area 27 meters</p>
+            <h3 class="type__title">Type 2</h3>
+            <p class="type__text">total area 27 meters</p>
+          </div>
         </a>
       </li>
-      <li class="apartment__item">
-        <a class="apartment__link" href="#">
+      <li class="apartment__item" data-modal-info-open>
+        <a class="apartment__link" href="">
           <div class="type__wrapper">
             <picture class="type_img">
               <source
                 srcset="
-                  ./images/png/apartment/type3__desc.png  1x,
+                  ./images/png/apartment/type3__desc.png   1x,
                   ./images/png/apartment/type3__desc@2.png 2x
                 "
                 type="image/png"
@@ -85,7 +86,7 @@
               />
               <source
                 srcset="
-                  ./images/png/apartment/type3__tab.png  1x,
+                  ./images/png/apartment/type3__tab.png   1x,
                   ./images/png/apartment/type3__tab@2.png 2x
                 "
                 type="image/png"
@@ -93,7 +94,7 @@
               />
               <source
                 srcset="
-                  ./images/png/apartment/type3__mob.png  1x,
+                  ./images/png/apartment/type3__mob.png   1x,
                   ./images/png/apartment/type3__mob@2.png 2x
                 "
                 type="image/png"
@@ -107,6 +108,8 @@
         </a>
       </li>
     </ul>
-    <button class="apartment__btn" type="button">Download catalog</button>
+    <button class="apartment__btn" type="button" data-modal-down-open>
+      Download catalog
+    </button>
   </div>
 </section>
