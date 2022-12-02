@@ -1,1 +1,35 @@
+<div class="backdrop" data-modal>
+    <div class="modal modal-contacts">
+        
+        <button class="modal__close-btn" type="button" data-modal-close>
+            <svg class="modal__close-icon" width="25" height="25">
+                <use href="./images/svg/symbol-defs.svg#icon-close_btn"></use>
+            </svg>
+        </button>
 
+        <form class="form contacts-form">
+            <p class="form__title">
+                Leave your contacts and we will contact you
+            </p>
+            
+            <div class="form__fields-wrapper">
+                <label class="form__label">
+                    <p class="form__label-text">Name</p>
+                    <input class="form__field" type="text" placeholder="Yuliia" />
+                </label>
+                <label class="form__label">
+                    <p class="form__label-text">Telephone</p>
+                    <input class="form__field" type="number" placeholder="+380" />
+                </label>
+                <label class="form__label">
+                    <p class="form__label-text">Email</p>
+                    <input class="form__field" type="email" placeholder="Contact@gmail.com" />
+                </label>
+            </div>
+
+            <button class="form__btn form__btn--contacts-style" type="submit">
+                Contact us
+            </button>
+        </form>
+    </div>
+</div>
